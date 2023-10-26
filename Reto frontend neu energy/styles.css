@@ -1,0 +1,63 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+  height: 100vh; /* Establece la altura del cuerpo al 100% de la ventana visible */
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0; /* Elimina el margen superior predeterminado */
+}
+
+.buttons {
+  display: flex;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+main {
+  flex-grow: 1; /* Permite que el contenido principal crezca para llenar el espacio restante */
+  padding: 20px;
+  overflow: auto; /* Agrega barra de desplazamiento si es necesario */
+}
+
+.data-table {
+  width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+  border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.data-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Personaliza los estilos según tus necesidades */
+
+/*# sourceMappingURL=styles.css.map */
