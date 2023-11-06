@@ -1,0 +1,39 @@
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th, .data-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .data-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .data-table tbody tr:first-child th {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+  }
+  
+/* Colores para los niveles de consumo */
+.green {
+    background-color: #00FF00;
+    color: #fff;
+  }
+  
+  .yellow {
+    background-color: #FFFF00;
+    color: #000;
+  }
+  
+  .red {
+    background-color: #FF0000;
+    color: #fff;
+  }
+  
+  
