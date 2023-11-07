@@ -10,16 +10,18 @@ function HeatMapTable({ consumoMensual, numberOfDays }) {
     } else {
       return 'red';
     }
-  };
+  }
+
+  const hoursHeader = Array.from({ length: 24 }, (_, hora) => (
+    <th key={hora}>{hora < 10 ? `0${hora}` : hora}</th>
+  ));
 
   return (
     <table className="data-table">
       <thead>
         <tr>
           <th></th>
-          {Array.from({ length: 24 }, (_, i) => (
-            <th key={i}>{i < 10 ? `0${i}` : i}</th>
-          ))}
+          {hoursHeader}
         </tr>
       </thead>
       <tbody>

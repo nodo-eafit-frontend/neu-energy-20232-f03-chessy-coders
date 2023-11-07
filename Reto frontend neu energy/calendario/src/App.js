@@ -1,9 +1,10 @@
+// App.js
 import React, { useState } from 'react';
 import './App.css';
 import ButtonDate from './componentes/ButtonDate';
 import HeatMapTable from './componentes/HeatMapTable';
-import MonthList from './componentes/MonthList';
-import YearList from './componentes/YearList';
+import Months from './componentes/Months';
+import Years from './componentes/Years';
 
 function App() {
   const [activeButton, setActiveButton] = useState('day');
@@ -16,7 +17,7 @@ function App() {
     setActiveButton(buttonType);
   };
 
-  const handleYearSelected = (year) => {
+  const handleYearChange = (year) => {
     setSelectedYear(year);
     if (year === '2020' || year === '2024') {
       setNumberOfDays(29);
@@ -27,7 +28,6 @@ function App() {
 
   const handleMonthChange = (month) => {
     setSelectedMonth(month);
-    setActiveButton('day'); // Cambia a la vista de día al seleccionar un mes.
   };
 
   const consumoMensual = [
@@ -41,13 +41,11 @@ function App() {
       <header>
         <div className="title">Gráficas</div>
         <ButtonDate
-          onYearSelected={handleYearSelected}
           activeButton={activeButton}
           onButtonChange={handleButtonChange}
           selectedYear={selectedYear}
-          selectedMonth={selectedMonth}
-          selectedDay={selectedDay}
           setSelectedMonth={setSelectedMonth}
+          onYearChange={handleYearChange}
         />
       </header>
       <main>
@@ -58,15 +56,15 @@ function App() {
           />
         )}
         {activeButton === 'month' && (
-          <MonthList
+          <Months
             selectedMonth={selectedMonth}
-            handleMonthChange={handleMonthChange}
+            onMonthChange={handleMonthChange}
           />
         )}
         {activeButton === 'year' && (
-          <YearList
+          <Years
             selectedYear={selectedYear}
-            handleYearChange={handleYearSelected}
+            onYearChange={handleYearChange}
           />
         )}
       </main>

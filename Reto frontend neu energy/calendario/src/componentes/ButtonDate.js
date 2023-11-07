@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+// ButtonDate.js
+import React from 'react';
 import './ButtonDate.css';
 
 const yearsData = ['2020', '2021', '2022', '2023'];
-
 const monthsData = [
   {
     name: 'Enero',
@@ -10,7 +10,7 @@ const monthsData = [
   },
   {
     name: 'Febrero',
-    days: 28,
+    days: 28, // 29 en años bisiestos
   },
   {
     name: 'Marzo',
@@ -54,17 +54,17 @@ const monthsData = [
   },
 ];
 
-const daysData = [...Array(31).keys()].map((day) => (day + 1).toString());
-
-function ButtonDate({ onYearSelected, activeButton, onButtonChange, selectedYear, selectedMonth, selectedDay, setSelectedMonth, setSelectedDay }) {
+function ButtonDate({
+  onYearChange,
+  activeButton,
+  onButtonChange,
+  selectedYear,
+  setSelectedMonth,
+}) {
   const handleButtonClick = (buttonType) => {
     onButtonChange(buttonType);
+    setSelectedMonth('Enero'); // Restablecer el mes seleccionado al cambiar de botón.
   };
-
-  const handleMonthChange = (month) => {
-    setSelectedMonth(month);
-    onButtonChange('day'); // Cambia a la vista de día al seleccionar un mes.
-  }
 
   return (
     <div className="button-container">
@@ -90,32 +90,10 @@ function ButtonDate({ onYearSelected, activeButton, onButtonChange, selectedYear
         Año
       </button>
       {activeButton === 'year' && (
-        <select onChange={(e) => onYearSelected(e.target.value)} value={selectedYear}>
+        <select onChange={(e) => onYearChange(e.target.value)} value={selectedYear}>
           {yearsData.map((year) => (
             <option key={year} value={year}>
               {year}
-            </option>
-          ))}
-        </select>
-      )}
-      {activeButton === 'month' && (
-        <div className="select-container">
-          {monthsData.map((month) => (
-            <button
-              key={month.name}
-              className={`month-button ${selectedMonth === month.name ? 'active' : ''}`}
-              onClick={() => handleMonthChange(month.name)}
-            >
-              {month.name}
-            </button>
-          ))}
-        </div>
-      )}
-      {activeButton === 'day' && (
-        <select onChange={(e) => setSelectedDay(e.target.value)} value={selectedDay}>
-          {daysData.map((day) => (
-            <option key={day} value={day}>
-              {day}
             </option>
           ))}
         </select>
