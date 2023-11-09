@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh
+  }
+  
+
+  header {
+    display: flex;
+    height: 40%;
+    width: 100%;
+    padding: 10px;
+  }
+
+  main {
+    margin-top: 20px;
+    height: 60%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }

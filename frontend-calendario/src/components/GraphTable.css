@@ -1,0 +1,25 @@
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.graph-table th,
+.graph-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+
+.green {
+  background-color: #7FFF00;
+}
+
+.yellow {
+  background-color: #FFFF00;
+}
+
+.red {
+  background-color: #FF0000; /* Rojo */
+}
