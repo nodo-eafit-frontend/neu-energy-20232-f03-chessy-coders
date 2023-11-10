@@ -1,17 +1,8 @@
 import React from 'react';
+import ColorCell from '../../atoms/ColorCell/ColorCell';
 import './GraphTable.css';
 
-function GraphTable({ consumoMensual, numberOfDays }) {
-  const getColorClass = (consumo) => {
-    if (consumo < 50) {
-      return 'green';
-    } else if (consumo >= 50 && consumo < 80) {
-      return 'yellow';
-    } else {
-      return 'red';
-    }
-  };
-
+function GraphTable({ data, numberOfDays }) {
   const hoursHeader = Array.from({ length: 24 }, (_, hora) => (
     <th key={hora}>{hora < 10 ? `0${hora}` : hora}</th>
   ));
@@ -20,7 +11,7 @@ function GraphTable({ consumoMensual, numberOfDays }) {
     <tr key={dia}>
       <th>Día {dia + 1}</th>
       {Array.from({ length: 24 }, (_, hora) => (
-        <td key={hora} className={getColorClass(consumoMensual[dia]?.[hora] || 0)}></td>
+        <ColorCell key={hora} value={data[dia]?.[hora] || 0} />
       ))}
     </tr>
   ));
@@ -33,9 +24,7 @@ function GraphTable({ consumoMensual, numberOfDays }) {
           {hoursHeader}
         </tr>
       </thead>
-      <tbody>
-        {tableRows}
-      </tbody>
+      <tbody>{tableRows}</tbody>
     </table>
   );
 }

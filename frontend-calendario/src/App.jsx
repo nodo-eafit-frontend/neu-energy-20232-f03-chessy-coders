@@ -1,11 +1,10 @@
-// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import GraphTable from './components/GraphTable';
-import GraphMonths from './components/GraphMonths';
-import GraphYear from './components/GraphYear';
-import data from './components/Data';
+import Header from './components/molecules/Header/Header';
+import GraphTable from './components/organisms/GraphTable/GraphTable';
+import GraphMonths from './components/organisms/GraphMonths/GraphMonths';
+import GraphYear from './components/organisms/GraphYear/GraphYear';
+import data from './components/atoms/Data';
 import './App.css';
 
 function App() {
