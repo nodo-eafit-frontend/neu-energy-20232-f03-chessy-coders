@@ -58,6 +58,7 @@ const data = [
       consumoMensual: generateRandomConsumoArray(),
       numberOfDays: 31,
       numberOfHoursPerDay: 24,
+      
     },
     {
       month: 11,
@@ -79,7 +80,5 @@ const data = [
   
   export default data;
 
-
-  console.log(generateRandomConsumoArra);
 
   
