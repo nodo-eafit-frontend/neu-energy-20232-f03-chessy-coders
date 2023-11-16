@@ -78,4 +78,8 @@ const data = [
   }
   
   export default data;
+
+
+  console.log(generateRandomConsumoArra);
+
   
