@@ -2,7 +2,7 @@ import React from 'react';
 import Label from '../../atoms/Label/Label';
 import Cell from '../../atoms/Cell/Cell';
 import energyData from '../../consumo_energia.json';
-import './Day.css';
+import './Day.scss';
 
 const Day = () => {
   // Accede a los datos de consumo de energía

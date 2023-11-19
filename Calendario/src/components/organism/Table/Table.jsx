@@ -1,8 +1,9 @@
 import React from 'react';
+import Hours from '../../atoms/Hours/Hours';
 import Label from '../../atoms/Label/Label';
 import Cell from '../../atoms/Cell/Cell';
 import energyData from '../../consumo_energia.json';
-import './Table.css';
+import './Table.scss';
 
 const Day = () => {
   // Accede a los datos de consumo de energía
@@ -13,6 +14,9 @@ const Day = () => {
 
   return (
     <div className="day-container">
+      <div>
+        <Hours/>
+      </div>
       <div className="labels">
         {daysOfMonth.map(day => (
           <Label key={day} text={day.toString()} className="day-label" />
