@@ -1,0 +1,15 @@
+.hours-list {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+}
+
+.hour-item {
+  padding: 8px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hour-item:last-child {
+  border-right: none;
+}

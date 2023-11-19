@@ -1,0 +1,51 @@
+.day-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.day-label {
+  margin-bottom: 5px;
+}
+
+.cells {
+  display: flex;
+  flex-direction: row;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%; /* Ajusta el ancho máximo según tus necesidades */
+  max-height: 80vh; /* Ajusta la altura máxima según tus necesidades */
+  margin: 20px auto;
+  border: 1px solid #ddd; /* Ajusta el estilo del borde según tus necesidades */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0; /* Ajusta el color de fondo del encabezado según tus necesidades */
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Ajusta el estilo del borde inferior según tus necesidades */
+  font-weight: bold;
+}
+
+.table-body {
+  display: flex;
+}
+
+.hours-column,
+.months-column {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto; /* Ajusta el estilo del desbordamiento según tus necesidades */
+}
