@@ -1,7 +1,7 @@
 .day-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: left;
+  align-items: left;
 }
 
 .labels {
@@ -11,7 +11,7 @@
 }
 
 .day-label {
-  margin-bottom: 5px; /* Espaciado opcional entre los días */
+  margin-bottom: 8px; /* Espaciado opcional entre los días */
 }
 
 .cells {

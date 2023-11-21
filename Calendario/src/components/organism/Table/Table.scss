@@ -1,12 +1,13 @@
 .day-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start; /* Alinea los días y las tablas a la izquierda */
 }
 
 .labels {
   display: flex;
   flex-direction: column;
+  flex-direction: content;
   margin-right: 10px;
 }
 
@@ -17,6 +18,7 @@
 .cells {
   display: flex;
   flex-direction: row;
+  flex-direction: center;
 }
 
 .table-container {
@@ -42,6 +44,14 @@
 .table-body {
   display: flex;
 }
+
+.hours-column,
+.months-column {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto; /* Ajusta el estilo del desbordamiento según tus necesidades */
+}
+
 
 .hours-column,
 .months-column {
