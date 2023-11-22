@@ -1,17 +1,16 @@
 .day-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .labels {
   display: flex;
-  flex-direction: column; /* Cambiado de row a column */
-  margin-right: 10px; /* Espaciado opcional entre los días y las celdas */
+  flex-direction: column;
+  margin-right: 4px;
 }
 
 .day-label {
-  margin-bottom: 5px; /* Espaciado opcional entre los días */
+  margin-bottom: 5px;
 }
 
 .cells {
@@ -19,4 +18,3 @@
   flex-direction: row;
 }
 
-/* Agrega otros estilos según sea necesario */

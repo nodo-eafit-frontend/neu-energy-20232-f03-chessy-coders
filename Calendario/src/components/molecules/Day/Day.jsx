@@ -5,7 +5,6 @@ import energyData from '../../consumo_energia.json';
 import './Day.scss';
 
 const Day = () => {
-  // Accede a los datos de consumo de energía
   const monthlyData = energyData[0].months[0];
 
   const daysOfMonth = monthlyData.días.map(dayData => dayData.día);

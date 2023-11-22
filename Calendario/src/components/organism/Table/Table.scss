@@ -1,7 +1,6 @@
 .day-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  margin-top: 0; /* Ajusta el margen superior según tus necesidades */
 }
 
 .labels {
@@ -10,22 +9,12 @@
   margin-right: 10px;
 }
 
-.day-label {
-  margin-bottom: 5px;
-}
-
-.cells {
-  display: flex;
-  flex-direction: row;
-}
-
 .table-container {
   display: flex;
-  flex-direction: column;
-  max-width: 90%; /* Ajusta el ancho máximo según tus necesidades */
-  max-height: 80vh; /* Ajusta la altura máxima según tus necesidades */
+  max-width: 90%;
+  max-height: 80vh;
   margin: 20px auto;
-  border: 1px solid #ddd; /* Ajusta el estilo del borde según tus necesidades */
+  border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -33,9 +22,9 @@
 .table-header {
   display: flex;
   justify-content: space-between;
-  background-color: #f0f0f0; /* Ajusta el color de fondo del encabezado según tus necesidades */
+  background-color: #f0f0f0;
   padding: 10px;
-  border-bottom: 1px solid #ddd; /* Ajusta el estilo del borde inferior según tus necesidades */
+  border-bottom: 1px solid #ddd;
   font-weight: bold;
 }
 
@@ -43,9 +32,24 @@
   display: flex;
 }
 
-.hours-column,
+.hours-column {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  order: 1; /* Cambia el orden para que aparezca arriba */
+}
+
 .months-column {
   flex: 1;
   padding: 10px;
-  overflow-y: auto; /* Ajusta el estilo del desbordamiento según tus necesidades */
+  overflow-y: auto;
+  order: 2; /* Cambia el orden para que aparezca abajo */
+}
+
+.labels h2 {
+  transform: rotate(-90deg); /* Rota el texto 90 grados en sentido antihorario */
+  white-space: nowrap; /* Evita que el texto se desborde en varias líneas */
+  transform-origin: left bottom; /* Ajusta el punto de rotación al esquina inferior izquierda */
+  writing-mode: vertical-lr; /* Modo de escritura vertical de izquierda a derecha */
+  margin-top: auto; /* Mantiene el texto pegado al fondo */
 }
