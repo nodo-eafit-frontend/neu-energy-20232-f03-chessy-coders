@@ -1,82 +1,24 @@
 .day-container {
   display: flex;
-<<<<<<< HEAD
   margin-top: 0; /* Ajusta el margen superior según tus necesidades */
-=======
-  flex-direction: row;
-  align-items: flex-start; /* Alinea los días y las tablas a la izquierda */
->>>>>>> refs/remotes/origin/develop
 }
 
-.labels {
-  display: flex;
-  flex-direction: column;
-  flex-direction: content;
-  margin-right: 10px;
+.hour {
+  justify-content: center;
+  
 }
 
-<<<<<<< HEAD
-=======
-.day-label {
-  margin-bottom: 5px;
+.day{
+
+
 }
 
-.cells {
-  display: flex;
-  flex-direction: row;
-  flex-direction: center;
+.hours {
+
+
 }
 
->>>>>>> refs/remotes/origin/develop
-.table-container {
-  display: flex;
-  max-width: 90%;
-  max-height: 80vh;
-  margin: 20px auto;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.table-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  font-weight: bold;
-}
-
-.table-body {
-  display: flex;
-}
-
-.hours-column {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  order: 1; /* Cambia el orden para que aparezca arriba */
-}
-
-.months-column {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  order: 2; /* Cambia el orden para que aparezca abajo */
-}
-
-.labels h2 {
-  transform: rotate(-90deg); /* Rota el texto 90 grados en sentido antihorario */
-  white-space: nowrap; /* Evita que el texto se desborde en varias líneas */
-  transform-origin: left bottom; /* Ajusta el punto de rotación al esquina inferior izquierda */
-  writing-mode: vertical-lr; /* Modo de escritura vertical de izquierda a derecha */
-  margin-top: auto; /* Mantiene el texto pegado al fondo */
-}
+.month {
 
 
-.hours-column,
-.months-column {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto; /* Ajusta el estilo del desbordamiento según tus necesidades */
 }

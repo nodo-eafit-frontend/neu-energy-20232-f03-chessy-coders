@@ -1,20 +1,19 @@
-.app-container {
-  display: grid;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  grid-template-columns: 1;
+.app {
+  height: 93vh;
 }
 
-.app-header {
+.header {
   display: flex;
   width: 100%;
+  height: 30%;
   padding: 10px;
   background-color: aqua;
 }
 
-.app-main {
+.main {
   width: 100%;
   display: flex;
+  height: 70%;
   background-color: blueviolet;
 }
 
