@@ -9,27 +9,17 @@ const Day = () => {
   // Accede a los datos de consumo de energía
   const monthlyData = energyData[0].months[0];
 
-  const daysOfMonth = monthlyData.días.map(dayData => dayData.día);
+  const daysOfMonth = monthlyData.días.map((dayData) => dayData.día);
   const hours = monthlyData.días[0].hora_x_energía.map((_, index) => index + 1);
 
   return (
-    <div className="day-container">
-      <div>
-        <Hours/>
-      </div>
-      <div className="labels">
-        {daysOfMonth.map(day => (
-          <Label key={day} text={day.toString()} className="day-label" />
-        ))}
-      </div>
-      <div className="cells">
-        {hours.map(hour => (
-          <Cell key={hour} consumption={monthlyData.días[0].hora_x_energía[hour - 1]} />
-        ))}
-      </div>
-    </div>
+    <>
+      <Label />
+      <Label />
+      <Hours />
+      <Month />
+    </>
   );
 };
 
 export default Day;
-
