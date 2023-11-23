@@ -1,19 +1,24 @@
-const fs = require('fs');
-const readJson = require('../../utils/json-update');
+const { leerJsonEnergia } = require('../../utils/json-update');
 require('dotenv').config();
 const { ENERGY_PATH } = process.env;
 
 const readEnergy = (req, res) => {
-  const targetYear = Number(req.params.year);
-  const targetMonth = req.params.month;
+  const { year, month } = req.params;
 
   try {
     // Zona segura
-    const consumo = readJson.leerJsonEnergia(ENERGY_PATH);
+    const consumo = leerJsonEnergia(ENERGY_PATH);
 
-    const consumoMensual = consumo.consumos.find((items) => items.year === targetYear && items.month === targetMonth);
+    const yearFound = consumo.find((item) => item.year === +year);
+    const monthFound = yearFound.months.find((item) => item.mes === month);
 
-    if (consumoMensual) {
+    const consumoMensual = {
+      year,
+      month,
+      days: monthFound.días,
+    };
+
+    if (monthFound) {
       res.status(200).send(consumoMensual);
     } else {
       res.status(404).send({});
