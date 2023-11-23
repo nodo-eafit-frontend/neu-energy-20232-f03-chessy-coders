@@ -1,24 +1,26 @@
-.day-container {
-  display: flex;
-  margin-top: 0; /* Ajusta el margen superior según tus necesidades */
+.tabla {
+  display:grid;
+  margin-top: 0;
 }
 
 .hour {
   justify-content: center;
+  align-items: center;
   
 }
 
 .day{
-
+  rotate: 90;
 
 }
 
 .hours {
+  justify-content: start;
 
 
 }
 
 .month {
-
+  border: 4px;
 
 }
