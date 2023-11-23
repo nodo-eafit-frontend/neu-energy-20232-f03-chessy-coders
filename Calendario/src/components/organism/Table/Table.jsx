@@ -4,16 +4,15 @@ import Hours from '../../molecules/Hours/Hours';
 import Month from '../../molecules/Month/Month';
 import './Table.scss';
 
-const Day = () => {
-
+const Table = ({ days }) => {
   return (
     <div className='tabla'>
-      <Label className='hour' text='Hora'/>
-      <Hours className='hours'/>
-      <Label className='day' text='Dia'/>
-      <Month className='month'/>
+      <Label className='label__title' text='Hora' />
+      <Hours className='hours' />
+      <Label className='label__title label--spin' text='Dia' />
+      <Month className='month' />
     </div>
   );
 };
 
-export default Day;
+export default Table;
