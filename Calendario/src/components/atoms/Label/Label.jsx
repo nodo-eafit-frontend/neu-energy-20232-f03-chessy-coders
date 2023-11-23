@@ -1,8 +1,9 @@
 import React from 'react';
-import './Label.scss';
 
-const Label = ({ text }) => {
-  return <label className="generic-label">{text}</label>;
+const namespace = 'label';
+
+const Label = ({ text, className }) => {
+  return <label className={`${namespace} ${className}`}>{text}</label>;
 };
 
 export default Label;
