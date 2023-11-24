@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
+import ReactDatePicker from 'react-datepicker';
 import PropTypes from 'prop-types';
 import { registerLocale, setDefaultLocale } from 'react-datepicker';
 import es from 'date-fns/locale/es';
@@ -7,17 +7,11 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 registerLocale('es', es);
 
-const MyDatePicker = ({ initialDate }) => {
-  const [selectedDate, setSelectedDate] = useState(initialDate || new Date());
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
-
+export const DatePicker = ({ initialDate, handleDateChange }) => {
   return (
-    <DatePicker
+    <ReactDatePicker
       showMonthYearPicker
-      selected={selectedDate}
+      selected={initialDate}
       onChange={handleDateChange}
       locale='es'
       dateFormat='MM/yyyy'
@@ -25,8 +19,8 @@ const MyDatePicker = ({ initialDate }) => {
   );
 };
 
-MyDatePicker.propTypes = {
+DatePicker.propTypes = {
   initialDate: PropTypes.instanceOf(Date),
 };
 
-export default MyDatePicker;
+
