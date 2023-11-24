@@ -7,10 +7,12 @@ import './Table.scss';
 const Table = ({ days }) => {
   return (
     <div className='tabla'>
-      <Label className='label__title' text='Hora' />
-      <Hours className='hours' />
-      <Label className='label__title label--spin' text='Dia' />
-      <Month className='month' />
+        <Label className='label__generic label__hour' text='Hora' />
+        <Label className='label__generic label--spin' text='Dia' />
+        <div className='main-table'>
+          <Hours className='hours' />
+          <Month className='month' />
+        </div>
     </div>
   );
 };
