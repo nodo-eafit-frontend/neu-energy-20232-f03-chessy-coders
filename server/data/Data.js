@@ -5,10 +5,7 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const months = [
-  'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-  'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
-];
+const months = Array.from({ length: 12 }, (_, i) => i);
 
 const daysInMonth = Array.from({ length: 31 }, (_, i) => i + 1);
 
