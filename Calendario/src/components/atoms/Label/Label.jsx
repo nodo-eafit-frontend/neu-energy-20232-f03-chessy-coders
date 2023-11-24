@@ -1,4 +1,5 @@
 import React from 'react';
+import './Label.scss';
 
 const namespace = 'label';
 

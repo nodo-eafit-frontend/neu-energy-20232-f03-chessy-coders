@@ -17,8 +17,8 @@ function App() {
   return (
     <div className='app'>
       <div className='header'>
-        <Label className='label__title' text='Gráficas' />
-        <Datepicker />
+        <Label className='label__generic label__title' text='Gráficas' />
+        <Datepicker/>
       </div>
       <div className='main'>
         <Table days={days} />
