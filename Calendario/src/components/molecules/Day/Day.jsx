@@ -1,19 +1,15 @@
 import React from 'react';
-import Label from '../../atoms/Label/Label';
 import Cell from '../../atoms/Cell/Cell';
+import Label from '../../atoms/Label/Label';
 import './Day.scss';
 
-const Day = () => {
-
-  return (
-    <>
-      <Label />
-      <Cell />
-      <Cell />
-      <Cell />
-      <Cell />
-    </>
-  );
+const Day = ({ day }) => {
+    return (
+        <div className="day-container">
+            <Label text={day["día"]} className="day-label"/>
+            {day["hora_x_energía"].map(consumo => <Cell consumo={consumo}/>)}
+        </div>
+    );
 };
 
-export default Day 
+export default Day;

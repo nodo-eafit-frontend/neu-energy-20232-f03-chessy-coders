@@ -1,18 +1,18 @@
 import React from 'react';
 import './Cell.scss';
 
-const Cell = ({ consumption }) => {
-  let colorClass;
+const Cell = ({ consumo }) => {
+    let colorClass;
 
-  if (consumption < 100) {
-    colorClass = 'green';
-  } else if (consumption < 160) {
-    colorClass = 'yellow';
-  } else {
-    colorClass = 'red';
-  }
+    if (consumo < 100) {
+        colorClass = 'green';
+    } else if (consumo < 160) {
+        colorClass = 'yellow';
+    } else {
+        colorClass = 'red';
+    }
 
-  return <div></div>;
+    return <div className={"cell " + colorClass}>{consumo}</div>;
 };
 
 export default Cell;
