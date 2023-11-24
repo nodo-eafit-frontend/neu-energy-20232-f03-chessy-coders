@@ -10,7 +10,7 @@ const readEnergy = (req, res) => {
     const consumo = leerJsonEnergia(ENERGY_PATH);
 
     const yearFound = consumo.find((item) => item.year === +year);
-    const monthFound = yearFound.months.find((item) => item.mes === month);
+    const monthFound = yearFound.months.find((item) => item.mes === +month);
 
     const consumoMensual = {
       year,
