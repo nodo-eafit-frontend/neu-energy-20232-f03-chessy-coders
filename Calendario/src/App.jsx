@@ -2,7 +2,6 @@ import Table from "./components/organism/Table/Table";
 import { useEffect, useState } from 'react';
 import './App.scss';
 import Label from './components/atoms/Label/Label';
-import Day from "./components/molecules/Day/Day";
 import { DatePicker } from './components/organism/Datepicker/Datepicker';
 
 function App() {

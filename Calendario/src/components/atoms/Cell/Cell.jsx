@@ -12,7 +12,7 @@ const Cell = ({ consumo }) => {
         colorClass = 'red';
     }
 
-    return <div className={"cell " + colorClass}>{consumo}</div>;
+    return <div className={"cell " + colorClass}>{}</div>;
 };
 
 export default Cell;

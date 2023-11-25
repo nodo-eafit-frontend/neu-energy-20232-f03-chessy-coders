@@ -6,12 +6,16 @@ import './Table.scss';
 
 const Table = ({ days, month }) => {
     return (
-        <div className="tabla">
-            <Label className="label__generic label__hour" text="Hora"/>
-            <Label className="label__generic label--spin" text="Dia"/>
+            <div className="tabla">
+                <Label className="label__generic label__hour" text="Hora"/>
+                <Label className="label__generic label--spin" text="Dia"/>
             <div className="main-table">
-                <Hours className="hours"/>
-                <Month className="month" days={days} month={month}/>
+                <div className='hour-table'>
+                    <Hours className="hours"/>
+                </div>
+                <div className='month-table'>
+                    <Month className="month" days={days} month={month}/>
+                </div>
             </div>
         </div>
     );

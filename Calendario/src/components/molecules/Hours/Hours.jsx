@@ -30,7 +30,6 @@ const Hours = () => {
       <Label text='21:00'className='label__hours'/>
       <Label text='22:00'className='label__hours'/>
       <Label text='23:00'className='label__hours'/>
-      <Label text='24:00'className='label__hours'/>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import './Day.scss';
 const Day = ({ day }) => {
     return (
         <div className="day-container">
-            <Label text={day["día"]} className="day-label"/>
+            <Label text={day["día"]} className="label__day"/>
             {day["hora_x_energía"].map(consumo => <Cell consumo={consumo}/>)}
         </div>
     );

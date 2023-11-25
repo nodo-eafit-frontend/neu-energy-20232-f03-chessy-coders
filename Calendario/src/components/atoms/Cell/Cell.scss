@@ -1,21 +1,18 @@
 .cell {
-  width: 4rem;
-  height: 2rem;
-  border: 1px groove #000;
-  border-radius: 2rem;
-  margin-left: 80px;
-
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  min-width: 7rem;
 
   &.green {
-    background-color: rgba(223,234,186,255);
+    background-color: rgba(223, 234, 186, 255);
   }
 
   &.yellow {
-    background-color: rgba(171,209,49,255);
+    background-color: rgba(171, 209, 49, 255);
   }
 
   &.red {
-    background-color: rgba(221,220,37,255);
+    background-color: rgba(221, 220, 37, 255);
   }
 }
-

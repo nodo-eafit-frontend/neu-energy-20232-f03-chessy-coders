@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "node --watch index.js",
+    "serve": "node --watch index.js",
     "data": "node ./data/Data.js"
   },
   "author": "",

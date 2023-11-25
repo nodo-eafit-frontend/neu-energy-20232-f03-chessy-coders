@@ -1,21 +1,5 @@
 .day-container {
   display: flex;
-  flex-direction: left;
-  align-items: left;
-}
-
-.labels {
-  display: flex;
-  flex-direction: column;
-  margin-right: 4px;
-}
-
-.day-label {
-  margin-bottom: 8px;
-}
-
-.cells {
-  display: flex;
-  flex-direction: row;
+  margin-bottom: 0.5rem;
 }
 
