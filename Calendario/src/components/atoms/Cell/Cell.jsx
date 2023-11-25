@@ -12,6 +12,9 @@ const Cell = ({ consumo }) => {
         colorClass = 'red';
     }
 
+
+    
+
     return <div className={"cell " + colorClass}>{}</div>;
 };
 

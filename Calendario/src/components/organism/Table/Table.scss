@@ -13,5 +13,13 @@
   position: relative;
   grid-column: 2 / 19;
   grid-row: 2 / 12;
-  overflow: scroll;
+  overflow: hidden;
+}
+
+.hour-table {
+  overflow: hidden;
+}
+
+.month-table {
+  overflow:auto;
 }

@@ -1,5 +1,6 @@
+@import "../../../sass/variables";
 .label {
-  color: #333; // TODO: ponerlo en variables
+  color: $negro; // TODO: ponerlo en variables
 
   &__generic {
     font-size: 3rem;

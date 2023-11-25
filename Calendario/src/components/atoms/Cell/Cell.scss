@@ -1,3 +1,4 @@
+@import "../../../sass/index.scss";
 .cell {
   height: 2.5rem;
   border-radius: 0.5rem;
@@ -5,14 +6,18 @@
   min-width: 7rem;
 
   &.green {
-    background-color: rgba(223, 234, 186, 255);
+    background-color: $green;
   }
 
   &.yellow {
-    background-color: rgba(171, 209, 49, 255);
+    background-color: $yellow;
   }
 
   &.red {
-    background-color: rgba(221, 220, 37, 255);
+    background-color: $red;
+
   }
+ &.grey {
+  background-color: $gris;
+ }
 }
