@@ -1,9 +1,16 @@
 @import "../../../sass/index.scss";
+
 .cell {
   height: 2.5rem;
   border-radius: 0.5rem;
   margin-right: 1rem;
   min-width: 7rem;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &.lightGreen {
+    background-color: $lightGreen;
+  }
 
   &.green {
     background-color: $green;
@@ -13,11 +20,24 @@
     background-color: $yellow;
   }
 
-  &.red {
-    background-color: $red;
-
+  &.grey {
+    background-color: $grey;
   }
- &.grey {
-  background-color: $gris;
- }
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .hover-info {
+    font-size: 1.4rem;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  &:hover .hover-info {
+    opacity: 1;
+  }
 }

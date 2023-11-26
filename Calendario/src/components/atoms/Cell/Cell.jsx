@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cell.scss';
 
-const Cell = ({ consumo }) => {
+const Cell = ({ consumo, hora }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
     let colorClass;
 
     if (consumo < 100) {
-        colorClass = 'green';
+        colorClass = 'grey';
+    } else if (consumo < 130) {
+        colorClass = 'lightGreen';
     } else if (consumo < 160) {
-        colorClass = 'yellow';
+        colorClass = 'green';
     } else {
-        colorClass = 'red';
+        colorClass = 'yellow';
     }
 
-
-    
-
-    return <div className={"cell " + colorClass}>{}</div>;
+    return (
+        <div
+            className={`cell ${colorClass}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            {isHovered && (
+                <div className="hover-info">
+                    <p>Consumo {consumo}</p>
+                </div>
+            )}
+        </div>
+    );
 };
 
 export default Cell;

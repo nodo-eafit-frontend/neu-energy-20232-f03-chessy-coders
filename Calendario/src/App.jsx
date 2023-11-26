@@ -17,7 +17,7 @@ function App() {
         <div className="app">
             <div className="header">
                 <Label className="label__generic label__title" text="Gráficas"/>
-                <DatePicker
+                <DatePicker className='Datepicker'
                     initialDate={currentDate}
                     handleDateChange={date => setCurrentDate(date)}
                 />
