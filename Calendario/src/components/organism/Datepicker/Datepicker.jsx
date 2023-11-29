@@ -12,6 +12,7 @@ export const DatePicker = ({ initialDate, handleDateChange }) => {
     handleDateChange(initialDate);
   }, [initialDate, handleDateChange]);
 
+  // TODO: Utilizar Date Month desde el HTML
   return (
     <ReactDatePicker
       showMonthYearPicker
