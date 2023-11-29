@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Cell.scss';
 
-const Cell = ({ consumo, hora }) => {
+const Cell = ({ consumo, porcentaje }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   let colorClass;
