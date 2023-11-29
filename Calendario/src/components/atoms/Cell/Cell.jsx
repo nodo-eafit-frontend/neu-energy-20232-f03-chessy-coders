@@ -25,6 +25,7 @@ const Cell = ({ consumo, hora }) => {
     >
       {isHovered && (
         <div className='hover-info'>
+          {/* TODO: Poner Wats enlugar de consumo */}
           <p>Consumo {consumo}</p>
         </div>
       )}

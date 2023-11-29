@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import './App.scss';
 import Label from './components/atoms/Label/Label';
 import { DatePicker } from './components/organism/Datepicker/Datepicker';
+import { TITLE_PAGE } from './constants';
 
 function App() {
   const [days, setDays] = useState([]);
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className='app'>
       <div className='header'>
-        <Label className='label__generic label__title' text='Gráficas' />
+        <Label className='label__generic label__title' text={TITLE_PAGE} />
         <DatePicker
           className='Datepicker'
           initialDate={currentDate}
