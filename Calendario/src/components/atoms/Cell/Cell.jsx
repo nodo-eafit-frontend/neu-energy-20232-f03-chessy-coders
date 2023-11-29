@@ -25,8 +25,7 @@ const Cell = ({ consumo, porcentaje }) => {
     >
       {isHovered && (
         <div className='hover-info'>
-          {/* TODO: Poner Wats enlugar de consumo */}
-          <p>Consumo {consumo}</p>
+          <p>{consumo} w</p>
         </div>
       )}
     </div>

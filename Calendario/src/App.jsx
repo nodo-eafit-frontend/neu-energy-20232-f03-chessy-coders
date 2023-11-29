@@ -1,20 +1,25 @@
-import Table from './components/organism/Table/Table';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.scss';
 import Label from './components/atoms/Label/Label';
 import { DatePicker } from './components/organism/Datepicker/Datepicker';
-import { TITLE_PAGE } from './constants';
+import { TITLE_PAGE } from './constants'; 
+import { getEnergy } from './services/index';
+import Table from './components/organism/Table/Table';
 
 function App() {
   const [days, setDays] = useState([]);
   const [currentDate, setCurrentDate] = useState(new Date());
+  const [isInitialized, setIsInitialized] = useState(false);
+
   useEffect(() => {
-    // TODO: Pasasrlo a un método aparte
-    fetch(`http://localhost:4003/energy/${currentDate.getFullYear()}/${currentDate.getMonth()}`)
-      .then((res) => res.json())
-      .then((data) => setDays(data.days))
-      .catch((err) => console.error(err));
-  }, []);
+    if (isInitialized) {
+      getEnergy(currentDate.getFullYear(), currentDate.getMonth())
+        .then((data) => setDays(data.days))
+        .catch((err) => console.error(err));
+    } else {
+      setIsInitialized(true);
+    }
+  }, [currentDate, isInitialized]);
 
   return (
     <div className='app'>
@@ -27,7 +32,7 @@ function App() {
         />
       </div>
       <div className='main'>
-        <Table days={days} month={currentDate.getMonth()} />
+        <Table days={days} currentDate={currentDate} />
       </div>
       <code>{JSON.stringify(days)}</code>
     </div>

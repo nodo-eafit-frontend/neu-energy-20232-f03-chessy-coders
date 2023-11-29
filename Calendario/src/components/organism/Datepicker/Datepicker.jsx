@@ -1,26 +1,29 @@
 import React, { useEffect } from 'react';
-import ReactDatePicker from 'react-datepicker';
 import PropTypes from 'prop-types';
-import { registerLocale } from 'react-datepicker';
-import es from 'date-fns/locale/es';
-import 'react-datepicker/dist/react-datepicker.css';
-
-registerLocale('es', es);
+import './Datepicker.scss';
 
 export const DatePicker = ({ initialDate, handleDateChange }) => {
   useEffect(() => {
     handleDateChange(initialDate);
   }, [initialDate, handleDateChange]);
 
-  // TODO: Utilizar Date Month desde el HTML
+  const currentYear = 2025;
+
+  const minYear = 2022;
+
+  const inputValue = initialDate.toISOString().slice(0, 7);
+
   return (
-    <ReactDatePicker
-      showMonthYearPicker
-      selected={initialDate}
-      onChange={(date) => handleDateChange(date)}
-      locale='es'
-      dateFormat='MM/yyyy'
-    />
+    <div className="DatePickerContainer">
+      <input
+        className="DatePickerInput"
+        type="month"
+        value={inputValue}
+        min={`${minYear}-01`}
+        max={`${currentYear}-12`}
+        onChange={(e) => handleDateChange(new Date(e.target.value))}
+      />
+    </div>
   );
 };
 
