@@ -1,6 +1,6 @@
 @import "../../../sass/variables";
 .label {
-  color: $negro; // TODO: ponerlo en variables
+  color: $negro;
 
   &__generic {
     font-size: 3rem;
@@ -13,7 +13,7 @@
   &__hour {
     margin-top: 0;
     display: flex;
-    grid-column: 10;
+    grid-column: 13;
   }
 
   &__title  {
@@ -29,7 +29,7 @@
   }
 
   &__hours {
-    margin-right: 2rem;
+    margin-right: 2.1rem;
     font-size: 1.4rem;
     min-width: 2rem;
   }

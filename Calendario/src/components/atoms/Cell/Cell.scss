@@ -4,7 +4,7 @@
   height: 2rem;
   border-radius: 0.5rem;
   margin-right: 1rem;
-  min-width: 3rem;
+  min-width: 3.1rem;
   position: relative;
   transition: box-shadow 0.3s ease-in-out;
 
@@ -29,10 +29,11 @@
   }
 
   .hover-info {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
     font-weight: 600;
-    opacity: 0;
+    opacity: 0; 
+    align-items: center;
     transition: opacity 1s ease-in-out;
     cursor: default;
   }
