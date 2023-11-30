@@ -14,21 +14,40 @@ const readEnergy = (req, res) => {
 
     // TODO:
     // 1: Crear método que retorne el valor de enregía más grande getMaxEnergy(monthFound): number
+
+    const getMaxEnergy = (monthData) => {
+      let maxEnergy = 0;
+    
+      monthData.days.forEach((day) => {
+        day.consumption_hour.forEach((hour) => {
+          if (hour.energy > maxEnergy) {
+            maxEnergy = hour.energy;
+          }
+        });
+      });
+    
+      return maxEnergy;
+    };
+
     // 2: Modificar la respuesta de las horas, agregando el atributo de porcentaje injectEnergyPercent(monthFound, maxEnergy): monthFoundModified
 
-    /*
-    days: [
-      {
-        day: 1,
-        consumption_hour: [
-          { energy: 192, percent: 0.7 },
-          { energy: 92, percent: 0.45 },
-          { energy: 137, percent: 0.7 },
-        ]
-      },
-      {...},
-      {...}
-    ] */
+    const getConsuptionHour = (hours, maxEnergy) => {
+      const consumption_hour = hours.map((energy) => {
+        return { energy, percent: energy / maxEnergy };
+      });
+    
+      return consumption_hour;
+    };
+    
+    const injectEnergyPercent = (consumoMensual, maxEnergy) => {
+      const daysModified = consumoMensual.days.map((item) => {
+        const consumption_hour = getConsuptionHour(item.hours, maxEnergy);
+    
+        return { day: item.day, consumption_hour };
+      });
+    
+      return daysModified;
+    };
 
     const consumoMensual = {
       year,

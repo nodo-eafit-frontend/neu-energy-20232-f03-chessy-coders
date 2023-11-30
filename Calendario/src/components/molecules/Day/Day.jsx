@@ -7,9 +7,12 @@ const Day = ({ day }) => {
     return (
         <div className="day-container">
             <Label text={day["día"]} className="label__days"/>
-            {day["hora_x_energía"].map(consumo => <Cell consumo={consumo}/>)}
+            {day["hora_x_energía"].map((consumo, index) => (
+                <Cell key={`cell_${index}`} consumo={consumo} />
+            ))}
         </div>
     );
 };
+
 
 export default Day;
