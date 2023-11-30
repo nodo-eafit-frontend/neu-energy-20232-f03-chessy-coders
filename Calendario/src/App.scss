@@ -9,7 +9,7 @@
 .header {
   display: flex;
   width: 98%;
-  height: 10%;
+  height: 8%;
   padding: 10px;
   justify-content: space-between;
   z-index: 100;
@@ -18,7 +18,7 @@
 .main {
   width: 100%;
   display: grid;
-  height: 90%;
+  height: 100%;
   overflow: hidden;
   z-index: 50;
 }

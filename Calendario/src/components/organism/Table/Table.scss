@@ -1,15 +1,16 @@
 .tabla {
   display: grid;
-  grid-template-columns: repeat(25, 1fr);
-  grid-template-rows: repeat(11, 1fr);
-  height: 87%;
+  grid-template-columns: repeat(41, 1fr);
+  grid-template-rows: repeat(19, 1fr);
+  height: 89%;
   position: absolute;
   width: 100%;
 }
 
 .main-table {
   position: relative;
-  grid-column: 2 / 25;
-  grid-row: 2 / 12;
+  width: 99%;
+  grid-column: 3 / 41;
+  grid-row: 3 / 20;
   overflow-x: auto;
 }

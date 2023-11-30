@@ -10,10 +10,8 @@ const Table = ({ days, currentDate }) => {
             <div className="tabla">
                 <Label className="label__generic label__hour" text={TITLE_HOUR}/>
                 <Label className="label__generic label__day" text={TITLE_DAY}/>
+                <Hours className="hours"/>
             <div className="main-table">
-                <div className='hour-table'>
-                    <Hours className="hours"/>
-                </div>
                 <div className='month-table'>
                     <Month className="month" days={days} currentDate={currentDate} />
                 </div>

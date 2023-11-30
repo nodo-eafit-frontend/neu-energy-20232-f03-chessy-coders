@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Cell.scss';
 
-const Cell = ({ consumo }) => {
+const Cell = ({ consumo, porcentaje }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [colorClass, setColorClass] = useState('');
 
-  useEffect(() => {
-    if (consumo.percent < 0.3) {
-      setColorClass('grey');
-    } else if (consumo.percent < 0.6) {
-      setColorClass('lightGreen');
-    } else if (consumo.percent < 0.9) {
-      setColorClass('green');
-    } else {
-      setColorClass('yellow');
-    }
-  }, [consumo.percent]);
+  let colorClass;
+
+  // TODO: Pasarlo a un método que retorne el string de la clase
+  if (consumo < 100) {
+    colorClass = 'grey';
+  } else if (consumo < 130) {
+    colorClass = 'lightGreen';
+  } else if (consumo < 160) {
+    colorClass = 'green';
+  } else {
+    colorClass = 'yellow';
+  }
 
   return (
     <div
@@ -25,7 +25,7 @@ const Cell = ({ consumo }) => {
     >
       {isHovered && (
         <div className='hover-info'>
-          <p>{consumo.energy} W</p>
+          <p>{consumo} W</p>
         </div>
       )}
     </div>
