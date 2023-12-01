@@ -2,7 +2,7 @@ import React from 'react';
 import Label from '../../atoms/Label/Label';
 import Hours from '../../molecules/Hours/Hours';
 import Month from '../../molecules/Month/Month';
-import { TITLE_DAY, TITLE_HOUR } from '../../../constants/index'; 
+import { TITLE_DAY, TITLE_HOUR } from '../../../constants/index';
 import './Table.scss';
 
 const Table = ({ days, currentDate }) => {
@@ -13,7 +13,7 @@ const Table = ({ days, currentDate }) => {
                 <Hours className="hours"/>
             <div className="main-table">
                 <div className='month-table'>
-                    <Month className="month" days={days} currentDate={currentDate} />
+                    <Month className="month" days={days} month={currentDate.getMonth()} />
                 </div>
             </div>
         </div>
