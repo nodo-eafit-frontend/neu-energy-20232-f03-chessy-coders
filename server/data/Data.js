@@ -17,7 +17,7 @@ function generateDailyEnergy() {
 
 function generateMonthlyEnergy() {
   return daysInMonth.map(day => ({
-    día: day,
+    day: day,
     hora_x_energía: generateDailyEnergy()
   }));
 }
@@ -26,8 +26,8 @@ function generateYearlyEnergy(year) {
   return {
     year: year,
     months: months.map((month, index) => ({
-      mes: month,
-      días: generateMonthlyEnergy()
+      month: month,
+      days: generateMonthlyEnergy()
     }))
   };
 }
