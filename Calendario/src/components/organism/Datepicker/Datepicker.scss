@@ -1,0 +1,24 @@
+.DatePickerContainer {
+  display: inline-block;
+  align-items: end;
+  margin-bottom: 10px;
+}
+
+.DatePickerInput {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid $green;
+  border-radius: 4px;
+  outline: none;
+}
+
+.DatePickerInput:focus {
+  border-color: $green;
+  box-shadow: 0 0 1rem $green;
+}
+
+.DatePickerInput::-webkit-calendar-picker-indicator {
+  background-color: $green;
+  color: #fff;
+  border: none; 
+}

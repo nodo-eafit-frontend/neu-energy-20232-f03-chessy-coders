@@ -1,0 +1,42 @@
+.cell {
+  height: 2rem;
+  border-radius: 0.5rem;
+  margin-right: 0.6rem;
+  min-width: 3.1rem;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &.lightGreen {
+    background-color: $lightGreen;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+
+  &.yellow {
+    background-color: $yellow;
+  }
+
+  &.grey {
+    background-color: $grey;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .hover-info {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0; 
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    cursor: default;
+  }
+
+  &:hover .hover-info {
+    opacity: 1;
+  }
+}

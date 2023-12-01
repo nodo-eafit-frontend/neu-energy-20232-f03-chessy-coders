@@ -1,0 +1,16 @@
+.tabla {
+  display: grid;
+  grid-template-columns: repeat(41, 1fr);
+  grid-template-rows: repeat(19, 1fr);
+  height: 89%;
+  position: absolute;
+  max-width: 100%;
+}
+
+.main-table {
+  position: relative;
+  width: 99%;
+  grid-column: 3 / 41;
+  grid-row: 2 / 20;
+  overflow-x: auto;
+}
