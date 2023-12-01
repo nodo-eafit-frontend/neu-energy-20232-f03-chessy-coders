@@ -1,1 +1,5 @@
-@import './sass';
+@import './components//sass/';
+@import './App.scss';
+@import './components/atoms/index.scss';
+@import './components/molecules/index.scss';
+@import './components/organism/index.scss';

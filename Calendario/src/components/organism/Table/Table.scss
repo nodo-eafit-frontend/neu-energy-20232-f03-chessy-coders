@@ -4,13 +4,13 @@
   grid-template-rows: repeat(19, 1fr);
   height: 89%;
   position: absolute;
-  width: 100%;
+  max-width: 100%;
 }
 
 .main-table {
   position: relative;
   width: 99%;
   grid-column: 3 / 41;
-  grid-row: 3 / 20;
+  grid-row: 2 / 20;
   overflow-x: auto;
 }

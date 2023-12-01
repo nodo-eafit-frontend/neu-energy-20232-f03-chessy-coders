@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.scss';
-import Label from './components/atoms/Label/Label';
-import { DatePicker } from './components/organism/Datepicker/Datepicker';
-import { TITLE_PAGE } from './constants'; 
-import { getEnergy } from './services/index';
-import Table from './components/organism/Table/Table';
+import { Label, DatePicker, Table, TITLE_PAGE, getEnergy } from './components';
 
 function App() {
   const [days, setDays] = useState([]);

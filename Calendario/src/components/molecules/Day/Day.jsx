@@ -1,9 +1,7 @@
 import React from 'react';
-import Cell from '../../atoms/Cell/Cell';
-import Label from '../../atoms/Label/Label';
-import './Day.scss';
+import {Cell, Label}  from '../../atoms';
 
-const Day = ({ day }) => {
+export const Day = ({ day }) => {
     return (
         <div className="day-container">
             <Label text={day.day} className="label__days"/>
@@ -15,4 +13,3 @@ const Day = ({ day }) => {
 };
 
 
-export default Day;

@@ -1,13 +1,10 @@
 .hours-list {
   display: flex;
-  height: 1.5rem;
-  font-size: 2rem;
-  margin-right: 1px;
+  grid-row: 2;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  margin-left: 2.1rem;
   position: sticky;
   top: 0;
   left: 0;
-  grid-column: 4 / 25;
-  grid-row: 2;
 }

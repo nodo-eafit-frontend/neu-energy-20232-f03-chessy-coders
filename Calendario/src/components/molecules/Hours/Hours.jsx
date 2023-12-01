@@ -1,8 +1,7 @@
 import React from 'react';
-import './Hours.scss';
-import Label from '../../atoms/Label/Label'
+import { Label } from '../../atoms'
 
-const Hours = () => {
+export const Hours = () => {
 
   return (
     <div className="hours-list">
@@ -34,4 +33,3 @@ const Hours = () => {
   );
 };
 
-export default Hours;
