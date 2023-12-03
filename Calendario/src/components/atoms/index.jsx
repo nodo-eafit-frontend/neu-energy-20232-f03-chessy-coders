@@ -1,2 +1,2 @@
-export { Cell } from './Cell/Cell';
-export { Label } from './Label/Label';
+export * from './Cell/Cell';
+export * from './Label/Label';

@@ -1,3 +1,3 @@
-export { Day } from './Day/Day';
-export { Hours } from './Hours/Hours';
-export { Month } from './Month/Month';
+export * from './Day/Day';
+export * from './Hours/Hours';
+export * from './Month/Month';

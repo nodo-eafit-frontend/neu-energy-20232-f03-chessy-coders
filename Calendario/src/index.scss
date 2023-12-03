@@ -1,5 +1,7 @@
-@import './components//sass/';
-@import './App.scss';
-@import './components/atoms/index.scss';
-@import './components/molecules/index.scss';
-@import './components/organism/index.scss';
+@import './sass/variables';
+@import './sass/fonts';
+@import './sass/base';
+@import './src/App.scss';
+@import './src/components/atoms/index.scss';
+@import './src/components/molecules/index.scss';
+@import './src/components/organism/index.scss';

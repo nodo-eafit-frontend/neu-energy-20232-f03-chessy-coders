@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { currentYear, minYear } from '../../../constants';
 
 export const DatePicker = ({ initialDate, handleDateChange }) => {
   useEffect(() => {
     handleDateChange(initialDate);
   }, [initialDate, handleDateChange]);
-
-  const currentYear = 2025;
-
-  const minYear = 2022;
 
   const inputValue = initialDate.toISOString().slice(0, 7);
 

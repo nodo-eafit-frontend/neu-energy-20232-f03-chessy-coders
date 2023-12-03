@@ -1,2 +1,2 @@
-export { DatePicker } from './Datepicker/Datepicker';
-export { Table } from './Table/Table';
+export * from './Datepicker/Datepicker';
+export * from './Table/Table';

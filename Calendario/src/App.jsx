@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Label, DatePicker, Table, TITLE_PAGE, getEnergy } from './components';
+import { Label } from './components/atoms';
+import { DatePicker, Table } from './components/organism';
+import { TITLE_PAGE } from './constants';
+import { getEnergy } from './services';
 
 function App() {
   const [days, setDays] = useState([]);
@@ -18,17 +21,17 @@ function App() {
 
   return (
     <div className='app'>
-      <div className='header'>
+      <header>
         <Label className='label__generic label__title' text={TITLE_PAGE} />
         <DatePicker
-          className='Datepicker'
+          className='date-picker'
           initialDate={currentDate}
           handleDateChange={(date) => setCurrentDate(date)}
         />
-      </div>
-      <div className='main'>
+      </header>
+      <main>
         <Table days={days} currentDate={currentDate} />
-      </div>
+      </main>
       <code>{JSON.stringify(days)}</code>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Label } from '../../atoms';
 import { Hours, Month } from '../../molecules';
-import { TITLE_DAY, TITLE_HOUR } from '../../constants/index';
+import { TITLE_DAY, TITLE_HOUR } from '../../../constants/index';
 
 export const Table = ({ days, currentDate }) => {
     return (
